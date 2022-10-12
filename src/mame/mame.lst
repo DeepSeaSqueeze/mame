@@ -3167,10 +3167,6 @@ mwskinst                        // (c) 2000 Midway
 @source:sinclair/atm.cpp
 atm                             //
 atmtb2                          //
-atmtb2plus                      //
-
-@source:sinclair/pentevo.cpp
-pentevo                         //
 
 @source:acorn/atom.cpp
 atom                            // 1979 Acorn Atom
@@ -12529,9 +12525,6 @@ digilog400                      //
 @source:skeleton/digijet.cpp
 digijet                         //
 
-@source:skeleton/digitech_gsp5.cpp
-gsp5                            //
-
 @source:skeleton/dim68k.cpp
 dim68k                          //
 
@@ -12561,6 +12554,7 @@ bm1stmix                        // GQ753 (c) 1997 (Japan)
 bm2ndmix                        // GX853 (c) 1998 (Japan)
 bm2ndmxa                        // GX853 (c) 1998 (Japan)
 bm3rdmix                        // GX853 (c) 1998 (Japan)
+bm3rdeaa                        // GX853 (c) 1998 (Europe)
 bm4thmix                        // GX847 (c) 1999 (Japan)
 bs4thmix                        // GX847 (c) 1999 (Korea)
 bm5thmix                        // GX981 (c) 1999 (Japan)
@@ -32621,7 +32615,6 @@ clubkcyc                        // 2003.?? Club Kart Cycraft Edition (Rev A)
 clubkcyco                       // 2003.?? Club Kart Cycraft Edition
 clubkprz                        // 2003.?? Club Kart Prize
 clubkpzb                        // 2004.01.23 Club Kart Prize Ver. B (strings in the EPROM indicate a build date of Jan. 23, 2004 for the game's program)
-clubkpzbp                       // 2004.?? Club Kart Prize Ver. B (prototype)
 clubkrt                         // 2001.06 Club Kart: European Session (Rev D)
 clubkrta                        // 2001.?? Club Kart: European Session (Rev A)
 clubkrtc                        // 2001.?? Club Kart: European Session (Rev C)
@@ -33767,7 +33760,6 @@ airattck                        // (c) 1996 Comad
 airattcka                       // (c) 1996 Comad
 arcadian                        // (c) 1994 NMK
 bigbang                         // UPL-93091 (c) 1993 NMK
-bigbanga                        // UPL-93091 (c) 1993 NMK
 bioship                         // UPL-90062 (c) 1990 UPL + American Sammy license
 bjtwin                          // UPL-93087 (c) 1993 NMK
 bjtwina                         // UPL-93087 (c) 1993 NMK
@@ -33927,7 +33919,6 @@ nova2001h                       // hack?
 nova2001u                       // UPL-83005 (c) [1983] + Universal license
 pkunwar                         // UPL-????? (c) 1985 (Arcade Game TV List - P.98, Left, 22 from top)
 pkunwarj                        // UPL-????? (c) 1985 (Arcade Game TV List - P.98, Left, 22 from top)
-pkunwarja                       //
 raiders5                        // UPL-85004 (c) 1985
 raiders5t                       // UPL-85004 (c) 1985 Taito license
 raiders5ta                      //
@@ -44470,7 +44461,6 @@ mu100b                          // 1998 MU-100B
 @source:yamaha/ympsr16.cpp
 psr16                           // 1988 PSR-16
 psr36                           // 1988 PSR-36
-pss480                          // 1988 PSS-480
 pss680                          // 1988 PSS-680
 
 @source:yamaha/ympsr40.cpp
