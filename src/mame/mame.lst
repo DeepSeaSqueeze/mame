@@ -23775,6 +23775,7 @@ popn1a                          // GX803 (c) 1998 (Asia)
 popn1j                          // GX803 (c) 1998 (Japan)
 popn1k                          // GX803 (c) 1998 (Korea)
 popn2                           // GX831 (c) 1998 (Japan)
+popn2t                          // GX831 (c) 1998 (Asia)
 popn3                           // GX980 (c) 1999 (Japan)
 popnstex                        // GQ970 (c) 1999 (Japan)
 
