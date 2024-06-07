@@ -2288,6 +2288,27 @@ ROM_START( popn2 )
 	DISK_IMAGE( "831jhdda01", 0, SHA1(ef62d5fcc1a36235fc932e6ecef71dc845d1d72d) ) /* GQ831JA  pop'n music ver1.00  1999/2/28 (C) KONAMI */
 ROM_END
 
+ROM_START( popn2t )
+	ROM_REGION( 0x100000, "maincpu", 0 )        /* MC68EC020FG25 MPU */
+	ROM_LOAD16_BYTE( "831taa01.8a", 0x000000, 0x80000, CRC(d6214cac) SHA1(18e74c81710228c91ab9eb554b63d9bd69b93ec8) )
+	ROM_LOAD16_BYTE( "831taa02.6a", 0x000001, 0x80000, CRC(aabe8689) SHA1(d51d277e9b5d0233d1c6bdfec40c32587f84b31a) )
+
+	ROM_REGION( 0x200000, "gfx1", 0)        /* SPRITE */
+	ROM_LOAD16_BYTE( "831taa03.19a", 0x000000, 0x80000, CRC(a07aeb72) SHA1(4d957c15d1b989e955249c34b0aa5679fb3e4fbf) )
+	ROM_LOAD16_BYTE( "831taa04.20a", 0x000001, 0x80000, CRC(9277d1d2) SHA1(6946845973f0ce15db383032343f6852873698eb) )
+	ROM_LOAD16_BYTE( "831taa05.22a", 0x100000, 0x80000, CRC(f3b63033) SHA1(c3c6de0d8c749ddf4926040637f03b11c2a21b99) )
+	ROM_LOAD16_BYTE( "831taa06.24a", 0x100001, 0x80000, CRC(43564e9c) SHA1(54b792b8aaf22876f9eb806e31b86af4b354bcf6) )
+
+	ROM_REGION( 0x200000, "k056832", 0 )       /* TILEMAP */
+	ROM_LOAD16_BYTE( "831taa07.22d", 0x000000, 0x80000, CRC(25af75f5) SHA1(c150514a3bc6f3f88a5b98ef0db5440e2c5fec2d) )
+	ROM_LOAD16_BYTE( "831taa08.23d", 0x000001, 0x80000, CRC(3b1b5629) SHA1(95b6bed5c5218a3bfb10996cd9af31bd7e08c1c4) )
+	ROM_LOAD16_BYTE( "831taa09.25d", 0x100000, 0x80000, CRC(ae7838d2) SHA1(4f8a6793065c6c1eb08161f65b1d6246987bf47e) )
+	ROM_LOAD16_BYTE( "831taa10.27d", 0x100001, 0x80000, CRC(85173cb6) SHA1(bc4d86bf4654a9a0a58e624f77090854950f3993) )
+
+	DISK_REGION( "ata:0:hdd" )            /* IDE HARD DRIVE */
+	DISK_IMAGE( "831jhdda01", 0, SHA1(ef62d5fcc1a36235fc932e6ecef71dc845d1d72d) ) /* GQ831JA  pop'n music ver1.00  1999/2/28 (C) KONAMI */
+ROM_END
+
 ROM_START( popn3 )
 	ROM_REGION( 0x100000, "maincpu", 0 )        /* MC68EC020FG25 MPU */
 	ROM_LOAD16_BYTE( "980a01.6a",    0x000000, 0x080000, CRC(ffd37d2c) SHA1(2a62ccfdb77a10356dbf08d6daa84faa3ff5d93a) )
@@ -2600,6 +2621,23 @@ void djmain_state::init_bmfinal()
 	m_ata_user_password = bmfinal_user_password;
 }
 
+void djmain_state::init_popn2t()
+{
+	static const uint8_t popn2t_user_password[2 + 32] =
+	{
+		0x00, 0x00,
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+	};
+
+	init_beatmania();
+
+	m_ata_master_password = beatmania_master_password;
+	m_ata_user_password = popn2t_user_password;
+}
+
 } // anonymous namespace
 
 
@@ -2638,6 +2676,7 @@ GAME( 1998, popn1a,   popn1,    djmaina, popn1,     djmain_state, init_beatmania
 GAME( 1998, popn1k,   popn1,    djmaina, popn1,     djmain_state, init_beatmania, ROT0, "Konami", "Pop'n Music 1 (ver KA-A, HDD 1.01)", 0 ) // KA-A based on filenames provided, no warning message
 GAME( 1998, popn1j,   popn1,    djmainj, popn1,     djmain_state, init_beatmania, ROT0, "Konami", "Pop'n Music 1 (ver JA-A, HDD 1.00)", 0 )
 GAME( 1999, popn2,    0,        djmainj, popn2,     djmain_state, init_beatmania, ROT0, "Konami", "Pop'n Music 2 (ver JA-A)", 0 )
+GAME( 1999, popn2t,   popn2,    djmaina, popn2,     djmain_state, init_popn2t,    ROT0, "Konami", "Pop'n Music 2 (ver TA-A, HDD 1.00)", 0 ) //Version "TA" on boot screen
 GAME( 1999, popn3,    0,        djmainj, popn2,     djmain_state, init_beatmania, ROT0, "Konami", "Pop'n Music 3 (ver JA-A)", 0 )
 // Pop'n Stage
 GAME( 1999, popnstex, 0,        djmainj, popnstex,  djmain_state, init_beatmania, ROT0, "Konami", "Pop'n Stage EX (ver JB-A)", 0 )
